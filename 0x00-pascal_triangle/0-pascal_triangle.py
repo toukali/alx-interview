@@ -3,25 +3,14 @@
 
 
 def pascal_triangle(n):
-        '''
-    Function to find Pascal's Triangle integers
-
-        Parameters:
-            n (int): The number of row's of Pascal's triangle
-
-        Returns:
-            pascal_triangle (list): Binary string of the sum of a and b
-    '''
-    # Add first 1.
-    if n == 1:
+    if n == 1 :
         return [[1]]
-     # Add emty list.
-    if n<=0:
+    if n<=0 :
         return []
     else:
         result = pascal_triangle(n-1)
         result.append([])
-        for i in range(n):
+        for i in range(n) :
             if i == 0:
                 result[n-1].append(1)
             elif i == n-1:
